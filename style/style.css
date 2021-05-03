@@ -1,0 +1,115 @@
+/* FOR ACCOUNTS */
+#notice {
+    background-color: #909090;
+    border: 1px solid black;
+    height: min-content;
+    display: none;
+}
+
+.form_account {
+    display: none;
+    border: 1px solid black;
+    background-color: #858585;
+    padding-bottom: 10px;
+
+}
+
+.form_textfield {
+    background-color: #bbb4b4;
+}
+
+/*  */
+html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+    --bgcolor-body: rgb(66,64,75);
+    --bgcolor-2: red;
+
+    --border-dev: 1px solid black;
+    --margin-top-elts: 5%;
+    --margin-header: 0 0 10% 0;
+}
+
+body {
+    background-color: var(--bgcolor-body);
+    width: 100vw;
+    /* height: 100vh; */
+    min-height: max-content;
+    max-width: 900px;
+    /* background-image: url("pexels-anton-atanasov-735812.jpg"); */
+    background-size: cover;
+}
+
+main * {
+    margin: 0 auto;
+    /* padding: 0; */
+    border: var(--border-dev);
+
+}
+main {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bgcolor-2);
+    background-color: rgba(79, 71, 114, 0.809);
+}
+
+.sec-title {
+
+}
+
+#main-home {
+    display: flex;
+    justify-content: center;
+}
+
+#section-start-app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: max-content;
+    margin-top: 5%;
+    padding: 5%;
+}
+
+#section-start-app submit {
+    justify-self: center;
+    margin-top: var(--margin-top-elts);
+}
+
+#section-start-app header {
+    justify-self: center;
+    margin: var(--margin-header);
+}
+
+.sec-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: max-content;
+    margin-top: 5%;
+    padding: 5%;
+}
+
+.sec-title submit {
+    justify-self: center;
+    margin-top: var(--margin-top-elts);
+}
+
+.sec-title header {
+    justify-self: center;
+    margin: var(--margin-header);
+}
+
+#main-application {
+    min-height: max-content;
+
+    display: flex;
+    flex-direction: column !important;
+}
+
+

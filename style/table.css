@@ -1,0 +1,55 @@
+#sec-table {
+    width: 80%;
+}
+
+#table_operations {
+    border-collapse: collapse;
+    width: 100%;
+
+    --bgline-1: rgb(136, 125, 125);
+    --bgline-2: rgb(160, 152, 152);
+    --color: black;
+
+    text-align: center;
+}
+
+#table_operations tr {
+    border: none;
+    border: 1px solid black;
+    /* width: max-content; */
+    margin: 0 2%;
+
+}
+
+#table_operations th {
+    padding: 2% 0;
+}
+#table_operations td {
+    margin: 2% 0;
+    /* padding: 2% 0; */
+}
+#td-actions {
+    display: flex;
+    flex-direction: row;
+}
+
+.color1 {
+    background-color: var(--bgline-1);
+}
+.color2 {
+    background-color: var(--bgline-2);
+}
+
+tr select[disabled], tr input[disabled] {
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none;
+    padding: 2px 2px 2px 2px; 
+    border: none;
+    margin: 0 auto;
+    color: var(--color);
+}
+tr select, tr input[type=date] {
+    padding: 2px 2px 2px 2px; 
+    border: none;
+}
