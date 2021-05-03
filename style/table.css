@@ -5,43 +5,64 @@
     width: 80%;
 }
 
-#table_operations {
+table {
     border-collapse: collapse;
     width: 100%;
 
-    --bgline-1: rgb(136, 125, 125);
-    --bgline-2: rgb(160, 152, 152);
+    --bgline-1: rgb(179, 174, 174);
+    --bgline-2: rgb(169, 161, 161);
+    --bghead: rgb(104, 98, 98);
     --color: black;
 
     text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#table-formulaire {
+    background-color: var(--bgline-1);
 }
 
+table th {
+    padding: 1% 0;
+    background-color: var(--bghead);
+}
 #table_operations tr {
     border: none;
     border: var(--border-dev);
-    /* width: max-content; */
     margin: 0 2%;
-}
-
-#table_operations th {
-    padding: 1% 0;
 }
 #table_operations td {
     margin: 2% 0;
-    /* padding: 2% 0; */
 }
 #td-actions {
     display: flex;
     flex-direction: row;
 }
 
-.color1 {
+.color1, .color1 input, .color1 select {
     background-color: var(--bgline-1);
 }
-.color2 {
+.color2, .color2 input, .color2 select {
     background-color: var(--bgline-2);
 }
 
+input[id^="sub-edit-"] {
+    background-color: rgb(102, 96, 93);
+}
+input[id^="sub-suppr-"] {
+    background-color: rgb(162, 78, 69);
+}
+input[id="sub-add"] {
+    background-color: rgb(58, 114, 58);
+}
+input[type="submit"] {
+    margin: 5px;
+    padding: 0;
+    border-radius: 100%;
+    border: none;
+    height: 30px;
+    width: 30px;
+}
 tr select[disabled], tr input[disabled] {
     -webkit-appearance: none; 
     -moz-appearance: none; 

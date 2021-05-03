@@ -48,7 +48,7 @@ body {
 main * {
     margin: 0 auto;
     /* padding: 0; */
-    border: var(--border-dev);
+    /* border: var(--border-dev); */
 
 }
 main {
@@ -80,12 +80,10 @@ section {
     margin-top: 5%;
     padding: 5%;
 }
-
 #section-start-app submit {
     justify-self: center;
     margin-top: var(--margin-top-elts);
 }
-
 #section-start-app header {
     justify-self: center;
     margin: var(--margin-header);
@@ -100,12 +98,10 @@ section {
     margin-top: 5%;
     padding: 5%;
 }
-
 .sec-title submit {
     justify-self: center;
     margin-top: var(--margin-top-elts);
 }
-
 .sec-title header {
     justify-self: center;
     margin: var(--margin-header);

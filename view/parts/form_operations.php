@@ -4,7 +4,7 @@
         <!-- <header>
             <h4>add new operation</h4>
         </header> -->
-            <table id="table_operations">
+            <table id="table-formulaire">
 
                 <tr>
                     <th>Date</th>
@@ -53,7 +53,7 @@
                     </td>
     
                     <td id="td-actions">
-                        <input type="submit" name="sub-add-op" value="add">
+                        <input type="submit" name="sub-add-op" value="add" id="sub-add">
                     </td>
 
             </table>
