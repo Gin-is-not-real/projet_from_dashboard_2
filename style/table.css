@@ -1,6 +1,9 @@
 #sec-table {
     width: 80%;
 }
+#sec-formulaire {
+    width: 80%;
+}
 
 #table_operations {
     border-collapse: collapse;
@@ -15,14 +18,13 @@
 
 #table_operations tr {
     border: none;
-    border: 1px solid black;
+    border: var(--border-dev);
     /* width: max-content; */
     margin: 0 2%;
-
 }
 
 #table_operations th {
-    padding: 2% 0;
+    padding: 1% 0;
 }
 #table_operations td {
     margin: 2% 0;

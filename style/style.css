@@ -29,6 +29,8 @@ html {
     --bgcolor-2: red;
 
     --border-dev: 1px solid black;
+    --border-dev: none;
+
     --margin-top-elts: 5%;
     --margin-header: 0 0 10% 0;
 }
@@ -55,9 +57,13 @@ main {
     background-color: var(--bgcolor-2);
     background-color: rgba(79, 71, 114, 0.809);
 }
+section {
+    margin: 2% auto;
+}
 
 .sec-title {
-
+    border-radius: 100%;
+    border: 1px solid black;
 }
 
 #main-home {
