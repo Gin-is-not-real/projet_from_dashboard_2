@@ -2,22 +2,20 @@
     let popupConfirm = "";
     let popYes = document.querySelector("#pop-add");
 
-
     let popNo = document.querySelector("#pop-cancel");
-
-    let idOnEdit = "";
+    popNo.addEventListener("click", function() {
+        popup.style.visibility = "hidden";
+    })
 
     function displayHiddePopupConfirm(txt, qSelector, opId) {
-        idOnEdit = opId;
-        popup.childNodes[0].textContent = txt + " " + idOnEdit;
+        popup.childNodes[0].textContent = txt + " " + opId;
         popup.style.visibility = popup.style.visibility =='visible' ? 'hidden' : 'visible';
 
         let target = document.querySelector(qSelector);
-
         popYes.addEventListener("click", function() {
-            console.log(target);
-            target.onclick();
+            target.click();
         })
+
     }
     
     function switchEditModeForLine(id, isOn) {
@@ -58,7 +56,8 @@
     function switchActionsButtonsHidden(id) {
         let hiddens = document.querySelectorAll('[class*="appear-on-edit"]');
         hiddens.forEach(hidde => {
-            if(hidde.id.includes(id)) {
+            
+            if(hidde.id.includes(id) && !hidde.id.includes("sub-suppr-" + id)) {
                 hidde.hidden = !hidde.hidden;
             }
         })

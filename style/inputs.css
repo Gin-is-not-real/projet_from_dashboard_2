@@ -10,7 +10,7 @@ body {
     --bgbtn-green: rgb(58, 114, 58);
     --bgbtn-red: rgb(162, 78, 69);
     --bgbtn-neutral: rgb(102, 96, 93);
-    --bg-popup: rgb(119, 87, 71);
+    --bg-popup: rgb(124, 39, 36);
 }
 
 input[type="submit"], .popup input {
@@ -64,19 +64,34 @@ input, select, option {
 }
 
 .popup {
-    visibility: hidden;
-    position: absolute;
-    left: 35%;
-    top: 50vh;
-    width: 180px;
-    height: 180px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     border-radius: 100%;
     background-color: var(--bg-popup);
 }
-
-.popup p {
+#pop-confirm {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 40vw;
+    top: 50vh;
+    width: 200px;
+    height: 200px;
+}
+#pop-confirm p {
     margin: 10px;
 }
+#pop-notice {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* visibility: hidden; */
+    position: absolute;
+    left: 40vw;
+    top: 50vh;
+    width: 200px;
+    height: 200px;
+}
+#pop-notice input {
+    justify-self: end;
+}
+
