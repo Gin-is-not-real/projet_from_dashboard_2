@@ -5,7 +5,7 @@
         <title><?=$title?></title>
         <link href="style/style.css" rel="stylesheet">
         <link href="style/table.css" rel="stylesheet">
-        <link href="style/table.css" rel="stylesheet">
+        <link href="style/deco.css" rel="stylesheet">
 
     </head>
 

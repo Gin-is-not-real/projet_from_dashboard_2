@@ -11,7 +11,7 @@ ob_start();
         </header>
         <div>
             <form action="index.php?" method="get">
-                <input type="submit" name="action"  value="start-app">
+                <input type="submit" name="action" value="start-app">
             </form>
                 <!-- <a href="../index.php?action=startApp">ENTER</a> -->
         </div>

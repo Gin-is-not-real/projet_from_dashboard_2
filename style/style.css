@@ -18,7 +18,7 @@
     background-color: #bbb4b4;
 }
 
-/*  */
+/* GENERAL  */
 html {
     height: 100%;
     margin: 0;
@@ -27,6 +27,9 @@ html {
     justify-content: center;
 
     --bgcolor-body: rgb(66,64,75);
+    --bgcolor-main: rgb(81, 76, 115, 69%);
+    
+    --bgcolor-1: #42404bbd;
     --bgcolor-2: red;
 
     --border-dev: 1px solid black;
@@ -42,39 +45,28 @@ body {
     /* height: 100vh; */
     min-height: max-content;
     max-width: 900px;
-    background-image: url("pexels-anton-atanasov-735812.jpg");
     background-image: url("pexels-pixabay-220118.jpg");
 
     background-size: cover;
 }
 
-main * {
-    margin: 0 auto;
-    /* padding: 0; */
-    /* border: var(--border-dev); */
-
-}
 main {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     background-color: var(--bgcolor-2);
-    background-color: rgba(79, 71, 114, 0.809);
+    background-color: var(--bgcolor-main);
+    background-color: var(--bgcolor-1);
+}
+main * {
+    margin: 0 auto;
 }
 section {
     margin: 2% auto;
 }
 
 .sec-title {
-    border-radius: 100%;
-    border: 1px solid black;
-}
-
-#main-home {
-    display: flex;
-    justify-content: center;
-}
-
-#section-start-app {
+    width: 30vw;
+    height: 30vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,39 +74,37 @@ section {
     height: max-content;
     margin-top: 5%;
     padding: 5%;
-}
-#section-start-app submit {
-    justify-self: center;
-    margin-top: var(--margin-top-elts);
-}
-#section-start-app header {
-    justify-self: center;
-    margin: var(--margin-header);
-}
-
-.sec-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    height: max-content;
-    margin-top: 5%;
-    padding: 5%;
-}
-.sec-title submit {
-    justify-self: center;
-    margin-top: var(--margin-top-elts);
 }
 .sec-title header {
     justify-self: center;
     margin: var(--margin-header);
 }
 
-#main-application {
-    min-height: max-content;
-
+#main-home {
     display: flex;
-    flex-direction: column !important;
+    justify-content: center;
+}
+#section-start-app submit {
+    justify-self: center;
+    margin-top: var(--margin-top-elts);
 }
 
 
+#main-application {
+    min-height: max-content;
+    display: flex;
+    flex-direction: column !important;
+}
+/* #section-start-app header {
+    justify-self: center;
+    margin: var(--margin-header);
+} */
+/* #section-start-app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: max-content;
+    margin-top: 5%;
+    padding: 5%;
+} */

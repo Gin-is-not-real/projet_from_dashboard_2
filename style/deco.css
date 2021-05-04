@@ -1,0 +1,17 @@
+#sec-deco {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+#div-deco {
+    height: 300px;
+    width: 300px;
+
+    border-radius: 100%;
+    background-color: #42404b38;
+    
+    position: relative;
+    float: left;
+    top: -50px;
+    left: -20px; 
+}

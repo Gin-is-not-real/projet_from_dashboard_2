@@ -4,7 +4,6 @@
 #sec-formulaire {
     width: 80%;
 }
-
 table {
     border-collapse: collapse;
     width: 100%;
@@ -21,7 +20,6 @@ table {
 #table-formulaire {
     background-color: var(--bgline-1);
 }
-
 table th {
     padding: 1% 0;
     background-color: var(--bghead);
@@ -55,6 +53,10 @@ input[id^="sub-suppr-"] {
 input[id="sub-add"] {
     background-color: rgb(58, 114, 58);
 }
+input[id^="sub-confirm-edit-"] {
+    background-color: rgb(58, 114, 58);
+}
+
 input[type="submit"] {
     margin: 5px;
     padding: 0;

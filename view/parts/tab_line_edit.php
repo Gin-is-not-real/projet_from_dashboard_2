@@ -44,18 +44,17 @@
             </td>
 
             <td id="td-actions">
-                <!-- <form action="index.php?action=edit-operation&amp;id=<?= $data['id'] ?>" method="post"> -->
-                    <input type="submit" class="sub-action sub-edit-operation appear-on-edit" id="sub-edit-<?= $data['id'] ?>" name="sub-edit-operation" value="confirm" hidden ></input>
+                    <input type="submit" class="sub-action sub-edit-operation appear-on-edit" id="sub-confirm-edit-<?= $data['id'] ?>" name="sub-edit-operation" value="confirm" hidden ></input>
                 </form>
+
                     <input type="submit" class="sub-action sub-edit disappear-on-edit" id="sub-edit-<?= $data['id'] ?>" name="sub-able-edit" value="edit" onclick="switchEditModeForLine(<?= $data['id'] ?>)"></input>
 
                     <input type="submit" class="sub-action sub-cancel-edit appear-on-edit" id="sub-cancel-edit-<?= $data['id'] ?>" name="sub-cancel-edit" onclick="switchEditModeForLine(<?= $data['id'] ?>, false)" value="cancel" hidden>
 
                     <form action="index.php?action=suppr-operation&amp;id=<?= $data['id'] ?>" method="post">
-                    <input type="submit" class="sub-action sub-suppr disappear-on-edit" id="sub-suppr-<?= $data['id'] ?>" name="sub-suppr-op" value="X">
+                        <input type="submit" class="sub-action sub-suppr disappear-on-edit" id="sub-suppr-<?= $data['id'] ?>" name="sub-suppr-op" value="X" onclick="return confirm('Do you really want to delete this entry ?')" >
                 </form>
             </td>
-    <!-- </form> -->
 
 <style type="text/css">
 
