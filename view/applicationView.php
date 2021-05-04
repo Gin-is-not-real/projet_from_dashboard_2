@@ -19,7 +19,7 @@ require_once('globals.php');
     </section> 
 
     <div class="popup">
-        <p>confirm message here</p>
+        <p></p>
         <div>
             <input type="button" id="pop-add" value="yes">
             <input type="button" id="pop-cancel" value="no">

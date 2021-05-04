@@ -1,9 +1,23 @@
     let popup = document.querySelector(".popup");
     let popupConfirm = "";
+    let popYes = document.querySelector("#pop-add");
 
-    function displayHiddePopupConfirm(txt) {
-        popup.childNodes[0].textContent = txt;
+
+    let popNo = document.querySelector("#pop-cancel");
+
+    let idOnEdit = "";
+
+    function displayHiddePopupConfirm(txt, qSelector, opId) {
+        idOnEdit = opId;
+        popup.childNodes[0].textContent = txt + " " + idOnEdit;
         popup.style.visibility = popup.style.visibility =='visible' ? 'hidden' : 'visible';
+
+        let target = document.querySelector(qSelector);
+
+        popYes.addEventListener("click", function() {
+            console.log(target);
+            target.onclick();
+        })
     }
     
     function switchEditModeForLine(id, isOn) {

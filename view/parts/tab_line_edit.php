@@ -51,9 +51,12 @@
 
                     <input type="submit" class="sub-action sub-cancel-edit appear-on-edit" id="sub-cancel-edit-<?= $data['id'] ?>" name="sub-cancel-edit" onclick="switchEditModeForLine(<?= $data['id'] ?>, false)" value="cancel" hidden>
 
+                    <!-- <input type="submit" class="sub-action sub-suppr disappear-on-edit" id="suppr-<?= $data['id'] ?>" name="sub-suppr-op" value="X" onclick="return displayHiddePopupConfirm('Do you really want to delete this entry ?', '#sub-suppr-' + <?= $data['id'] ?>, <?= $data['id'] ?>)" > -->
+
                     <form action="index.php?action=suppr-operation&amp;id=<?= $data['id'] ?>" method="post">
-                        <input type="submit" class="sub-action sub-suppr disappear-on-edit" id="sub-suppr-<?= $data['id'] ?>" name="sub-suppr-op" value="X" onclick="return confirm('Do you really want to delete this entry ?')" >
-                        <!-- <input type="submit" class="sub-action sub-suppr disappear-on-edit" id="sub-suppr-<?= $data['id'] ?>" name="sub-suppr-op" value="X" onclick="return displayHiddePopupConfirm('Do you really want to delete this entry ?')" > -->
+                        <input type="submit" class="sub-action sub-suppr disappear-on-edit" id="sub-suppr-<?= $data['id'] ?>" name="sub-suppr-op" value="X" onclick="return confirm('Do you really want to delete this entry ?')">
+
+
 
                 </form>
             </td>
