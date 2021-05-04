@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'Sansation';
+    src: url('fonts/Sansation_Light.eot');
+    src: local('☺'), url('fonts/Sansation_Light.woff') format('woff'), url('fonts/Sansation_Light.ttf') format('truetype'), url('fonts/Sansation_Light.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}   
+
+body {
+    --bgbtn-green: rgb(58, 114, 58);
+    --bgbtn-red: rgb(162, 78, 69);
+    --bgbtn-neutral: rgb(102, 96, 93);
+    --bg-popup: rgb(119, 87, 71);
+}
+
+input[type="submit"], .popup input {
+    margin: 5px;
+    padding: 0;
+    border-radius: 100%;
+    border: none;
+    height: 30px;
+    width: 30px;
+}
+
+input[id*="edit-"] {
+    background-color: var(--bgbtn-neutral);
+}
+input[id*="suppr-"] {
+    background-color: var(--bgbtn-red);
+}
+input[id*="add"] {
+    background-color: var(--bgbtn-green);
+}
+input[id*="cancel"] {
+    background-color: var(--bgbtn-red);
+}
+input[id*="confirm-edit-"] {
+    background-color: var(--bgbtn-green);
+    height: 50px;
+    width: 50px;
+}
+input[id*="cancel-edit"] {
+    height: 50px;
+    width: 50px;
+}
+
+tr select[disabled], tr input[disabled] {
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none;
+    padding: 2px 2px 2px 2px; 
+    border: none;
+    /* margin: 0 auto; */
+    color: var(--color);
+}
+tr select, tr input[type=date] {
+    padding: 2px 2px 2px 2px; 
+    border: none;
+}
+
+input, select, option {
+    font-family: 'Sansation';
+    font-weight: bold;
+}
+
+.popup {
+    visibility: hidden;
+    position: absolute;
+    left: 35%;
+    top: 50vh;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: var(--bg-popup);
+}
+
+.popup p {
+    margin: 10px;
+}

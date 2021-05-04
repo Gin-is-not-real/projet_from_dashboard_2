@@ -53,6 +53,8 @@
 
                     <form action="index.php?action=suppr-operation&amp;id=<?= $data['id'] ?>" method="post">
                         <input type="submit" class="sub-action sub-suppr disappear-on-edit" id="sub-suppr-<?= $data['id'] ?>" name="sub-suppr-op" value="X" onclick="return confirm('Do you really want to delete this entry ?')" >
+                        <!-- <input type="submit" class="sub-action sub-suppr disappear-on-edit" id="sub-suppr-<?= $data['id'] ?>" name="sub-suppr-op" value="X" onclick="return displayHiddePopupConfirm('Do you really want to delete this entry ?')" > -->
+
                 </form>
             </td>
 

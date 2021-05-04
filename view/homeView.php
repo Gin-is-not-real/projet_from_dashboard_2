@@ -6,9 +6,8 @@ ob_start();
 <main id="main-home">
 
     <section class="sec-title" id="section-start-app">
-        <header>
-            <h1>Bulbs Dashboard</h1>
-        </header>
+        <?php include('parts/title.php'); ?>
+        
         <div>
             <form action="index.php?" method="get">
                 <input type="submit" name="action" value="start-app">
