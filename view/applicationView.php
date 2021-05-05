@@ -6,10 +6,9 @@ require_once('globals.php');
 
 <main id="main-application">
     
-    <section class="sec-title">
-        <?php include('parts/title.php'); ?>
-        <p>application view</p> 
-    </section> 
+    <!-- <section class="sec-title"> -->
+        <!-- <p>application view</p>  -->
+    <!-- </section>  -->
 
     <?php
         include('parts/form_operations.php');

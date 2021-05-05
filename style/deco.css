@@ -4,6 +4,7 @@ body {
     --bgbtn-neutral: rgb(102, 96, 93);
     --bg-popup: rgb(124, 39, 36);
     --radius: 10px;
+
 }
 
 #sec-deco {
@@ -23,7 +24,18 @@ body {
     top: -50px;
     left: -20px; 
 }
-/*  */
+
+
+/* POPUPS */
+#main-popups {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    max-width: 900px;
+    height: 100%;
+    background-color: transparent;
+    z-index: 1;
+}
 .popup {
     visibility: hidden;
     border-radius: var(--radius);
@@ -32,24 +44,30 @@ body {
 .popup * {
     border: 1px solid black;
 }
+.popup p {
+    margin: 20px;
+    text-align: center;
+}
 #pop-confirm {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-content: center;
-    position: absolute;
-    left: 40vw;
-    top: 50vh;
+
+    width: 200px;
     min-width: 200px;
-    min-height: 200px;
     max-width: 250px;
     max-height: max-content;
+    
+    position: block;
+    margin-left: auto;
+    margin-right: auto;
 
 }
-#pop-confirm p {
+/* #pop-confirm p {
     margin: 20px;
     text-align: center;
-}
+} */
 #pop-confirm div {
     /* margin: 10px; */
     display: flex;
@@ -59,6 +77,28 @@ body {
 
 /* NOTICE */
 #pop-notice {
+    border-radius: var(--radius);
+    /* visibility: visible; */
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    right: 5%;
+    top: 10%;
+    width: 200px;
+    height: 200px;
+}
+#pop-notice div {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+/* #pop-notice p  {
+    margin: 20px;
+    text-align: center;
+} */
+/* #pop-notice {
     display: grid;
     grid-template-columns: 1fr;
     position: absolute;
@@ -66,8 +106,9 @@ body {
     top: 10vh;
     width: 200px;
     height: 200px;
-    border-radius: 10px;
+    border-radius: var(--radius);
+    visibility: visible;
 }
 #pop-notice input {
-    justify-self: end;
-}
+    justify-self: end; 
+} */

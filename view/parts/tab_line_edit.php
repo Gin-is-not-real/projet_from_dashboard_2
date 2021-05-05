@@ -41,25 +41,26 @@
             </td>
 
             <td id="td-actions">
+
                     <!-- SUB CONFIRM EDIT hidden-->
                     <!-- confirm button of the edition mode, appears when the line is being edited, after a clic on the sub-edit button  -->
                     <input type="submit" class="sub-action sub-edit-operation appear-on-edit" id="sub-confirm-edit-<?= $data['id'] ?>" name="sub-edit-operation" value="confirm" hidden ></input>
                 </form>
 
-                    <!-- SUB EDIT -->
+                    <!-- SUB EDIT MODE-->
                     <!-- make line's inputs availables, make disappear sub-edit- and sub-suppr-op buttons and appears buttons sub-confirm-edit and sub-cancel-edit -->
                     <input type="submit" class="sub-action sub-edit disappear-on-edit" id="sub-edit-<?= $data['id'] ?>" name="sub-able-edit" value="edit" onclick="switchEditModeForLine(<?= $data['id'] ?>)"></input>
 
-                    <!-- SUB CANCEL MODE hidden-->
+                    <!-- SUB CANCEL EDIT hidden-->
                     <!-- visible only if line is being edited -->
                     <input type="submit" class="sub-action sub-cancel-edit appear-on-edit" id="sub-cancel-edit-<?= $data['id'] ?>" name="sub-cancel-edit" onclick="switchEditModeForLine(<?= $data['id'] ?>, false)" value="cancel" hidden>
 
                     <!-- SUB SUPPR OP -->
                     <!-- made appear a popup who ask confirm for delete the line -->
-                    <input type="submit" class="sub-action sub-suppr disappear-on-edit" id="suppr-<?= $data['id'] ?>" name="sub-suppr-op" value="X" onclick="return displayHiddePopupConfirm('do you really want to delete this entry: ', '#sub-suppr-' + <?= $data['id'] ?>, <?= $data['id'] ?>)" >
+                    <input type="submit" class="sub-action sub-suppr disappear-on-edit" id="suppr-<?= $data['id'] ?>" name="sub-suppr-op" value="X" onclick="return displayHiddePopupConfirm('You will delete the entry n° ' + <?= $data['id'] ?> + ' ?', '#sub-suppr-' + <?= $data['id'] ?>, <?= $data['id'] ?>)" >
 
                     <form action="index.php?action=suppr-operation&amp;id=<?= $data['id'] ?>" method="post">
-                        <!-- SUB SUPPR ID -->
+                        <!-- SUB SUPPR ID hidden-->
                         <!-- hidden. Is activated by clic on the "yes" button of the confirm popup-->
                         <input type="submit" class="sub-action sub-suppr disappear-on-edit" id="sub-suppr-<?= $data['id'] ?>" name="sub-suppr-op" value="X" hidden>
 

@@ -1,4 +1,5 @@
     // let popup = document.querySelector(".popup");
+    let popupsMain 
     let popupConfirm = document.querySelector("#pop-confirm");
     let msgConfirm = document.querySelector("#p-confirm");
 
@@ -17,9 +18,10 @@
                 -> when click on the "yes" button, that call the onclick event of the "suppr" submit button: the line is deleted
                 -> when click on the "no" button, that call the onclick event of the "cancel" submit
     */
-    function displayHiddePopupConfirm(txt, qSelector, opId) {
+    function displayHiddePopupConfirm(txt, qSelector, opId, data) {
         popupConfirm.childNodes[1].textContent = txt;
         // msgConfirm.textContent = txt + " " + opId;
+
 
         popupConfirm.style.visibility = popupConfirm.style.visibility =='visible' ? 'hidden' : 'visible';
         let target = document.querySelector(qSelector);
