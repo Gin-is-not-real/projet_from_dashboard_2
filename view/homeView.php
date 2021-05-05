@@ -6,7 +6,6 @@ ob_start();
 <main id="main-home">
 
     <section class="sec-title" id="section-start-app">
-        <?php include('parts/title.php'); ?>
         
         <div>
             <form action="index.php?" method="get">

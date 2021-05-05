@@ -41,10 +41,9 @@ html {
     --bgcolor-main: rgb(81, 76, 115, 69%);
     
     --bgcolor-1: #42404bbd;
-    --bgcolor-2: red;
 
     --border-dev: 1px solid black;
-    /* --border-dev: none; */
+    --border-dev: none;
 
     --margin-top-elts: 5%;
     --margin-header: 0 0 10% 0;
@@ -53,7 +52,12 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+body {
+    --bgbtn-green: rgb(58, 114, 58);
+    --bgbtn-red: rgb(162, 78, 69);
+    --bgbtn-neutral: rgb(102, 96, 93);
+    --bg-popup: rgb(124, 39, 36);
+}
 body {
     font-family: 'Sansation', sans-serif;
 
@@ -64,10 +68,6 @@ body {
 
     margin: 0 auto;
     background-color: var(--bgcolor-1);
-
-    /* background-image: url("img/pexels-pixabay-220118.jpg");
-    background-repeat: no-repeat;
-    background-size: cover; */
 }
 
 main {
@@ -86,33 +86,29 @@ section {
 }
 
 /* SECTION TITLE */
-#main-title {
-    padding: 3% 0;
-    padding-top: 5%;
-}
 .sec-title, .sec-title * {
-    border: var(--border-dev);
+    /* border: var(--border-dev); */
 }
 .sec-title {
-    width: 30vw;
-    height: 30vw;
+    width: 80%;
     height: max-content;
 
-    /* margin-top: 5%; */
     /* padding: 5%; */
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
 }
-.sec-title header {
-    justify-self: center;
-    margin: var(--margin-header);
-}
 .sec-title figure {
-    position: relative;
-    margin-left: 0;
+    width: 100%;
+
+    background-color: #82839d95;
+    border-radius: 10px;
+}
+.sec-title img {
+    border-radius: 100%;
+    border-radius: 10px;
+
 }
 
 /* HOME */
@@ -121,7 +117,10 @@ section {
     justify-content: center;
     z-index: 2;
 }
-#section-start-app submit {
+#section-start-app input {
+    width: 100px;
+    height: 100px;
+    background-color: var(--bgbtn-green);
     justify-self: center;
     margin-top: var(--margin-top-elts);
 }
@@ -134,6 +133,5 @@ section {
     display: flex;
     flex-direction: column !important;
     z-index: 3;
-    
 }
 

@@ -6,12 +6,7 @@
     font-style: normal;
 }   
 
-body {
-    --bgbtn-green: rgb(58, 114, 58);
-    --bgbtn-red: rgb(162, 78, 69);
-    --bgbtn-neutral: rgb(102, 96, 93);
-    --bg-popup: rgb(124, 39, 36);
-}
+
 
 input[type="submit"], .popup input {
     margin: 5px;

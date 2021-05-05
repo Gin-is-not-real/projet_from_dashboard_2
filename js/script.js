@@ -1,13 +1,16 @@
     // let popup = document.querySelector(".popup");
-    let popupsMain 
+    let popupsMain = document.querySelector("#main-popups");
     let popupConfirm = document.querySelector("#pop-confirm");
     let msgConfirm = document.querySelector("#p-confirm");
+    let onEditId;
 
     let popYes = document.querySelector("#pop-add");
 
     let popNo = document.querySelector("#pop-cancel");
     popNo.addEventListener("click", function() {
         popupConfirm.style.visibility = "hidden";
+        popupsMain.style.display = "none";
+        disableAllOthers(onEditId, false);
     })
 
     /*
@@ -18,11 +21,11 @@
                 -> when click on the "yes" button, that call the onclick event of the "suppr" submit button: the line is deleted
                 -> when click on the "no" button, that call the onclick event of the "cancel" submit
     */
-    function displayHiddePopupConfirm(txt, qSelector, opId, data) {
+    function displayHiddePopupConfirm(txt, qSelector, opId) {
         popupConfirm.childNodes[1].textContent = txt;
         // msgConfirm.textContent = txt + " " + opId;
 
-
+        popupsMain.style.display = "block";
         popupConfirm.style.visibility = popupConfirm.style.visibility =='visible' ? 'hidden' : 'visible';
         let target = document.querySelector(qSelector);
         popYes.addEventListener("click", function() {
@@ -42,14 +45,17 @@
                     - made disabled true for buttons of the other lines by call disableAllOthers(id)
     */
     function switchEditModeForLine(id, isOn) {
+        let bool = true;
         if(isOn != false) {
+            onEditId = id;
             addClassNameOnEditAndAble(id);
         }
         else {
+            bool = false;
             removeClassNameOnEditAndDisable();
         }
         switchActionsButtonsHidden(id);
-        disableAllOthers(id)
+        disableAllOthers(id, bool);
     }
 
     /*
@@ -97,11 +103,11 @@
     /*
         disable EDIT and X buttons for others lines while a line where in edit mode
     */
-    function disableAllOthers(id) {
+    function disableAllOthers(id, bool) {
         let btn = document.querySelectorAll("input[type='submit']");
         btn.forEach(b => {
             if(!b.id.includes(id)) {
-                b.disabled = true;
+                b.disabled = bool !== false ? true : false;
             }
         })
     }

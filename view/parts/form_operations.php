@@ -1,6 +1,9 @@
 <section id="sec-formulaire">
 
     <form id="form-operation-add" action="index.php?action=add-operation" method="post">
+        <header>
+            <h3>ADD NEW OPERATION</h3>
+        </header>
 
             <table id="table-formulaire">
 

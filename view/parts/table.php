@@ -4,6 +4,9 @@
         <h4>view operations</h4>
     </header>
 </section> -->
+    <header>
+        <h3>VIEW OPERATIONS</h3>
+    </header>
 
 <table id="table_operations">
 

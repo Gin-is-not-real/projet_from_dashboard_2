@@ -2,9 +2,11 @@ body {
     --bgbtn-green: rgb(58, 114, 58);
     --bgbtn-red: rgb(162, 78, 69);
     --bgbtn-neutral: rgb(102, 96, 93);
-    --bg-popup: rgb(124, 39, 36);
-    --radius: 10px;
+    --bg-popup: rgba(124, 39, 36, 0.926);
+    /* --bg-popup: #63a22fd2; */
 
+    --bg-popup-hover: rgb(124, 39, 36);
+    --radius: 10px;
 }
 
 #sec-deco {
@@ -25,7 +27,6 @@ body {
     left: -20px; 
 }
 
-
 /* POPUPS */
 #main-popups {
     display: none;
@@ -37,32 +38,35 @@ body {
     z-index: 1;
 }
 .popup {
-    visibility: hidden;
+    /* visibility: hidden; */
     border-radius: var(--radius);
     background-color: var(--bg-popup);
+
+    width: 200px;
+    min-width: 200px;
+    max-width: 250px;
+    max-height: max-content;
 }
+
 .popup * {
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .popup p {
     margin: 20px;
     text-align: center;
 }
 #pop-confirm {
+    position: relative;
+    margin-top: 25%;
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-content: center;
 
-    width: 200px;
-    min-width: 200px;
-    max-width: 250px;
-    max-height: max-content;
-    
-    position: block;
-    margin-left: auto;
-    margin-right: auto;
-
+}
+#pop-confirm:hover {
+    background-color: var(--bg-popup-hover);
 }
 /* #pop-confirm p {
     margin: 20px;
@@ -77,38 +81,24 @@ body {
 
 /* NOTICE */
 #pop-notice {
-    border-radius: var(--radius);
-    /* visibility: visible; */
+    visibility: hidden;
+    position: absolute;
+    margin-top: 15%;
+    right: 10px;
 
     display: flex;
     flex-direction: column;
 
-    position: relative;
-    right: 5%;
-    top: 10%;
-    width: 200px;
-    height: 200px;
+    background-color: rgba(40, 112, 52, 0.775);
+
 }
 #pop-notice div {
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-}
-/* #pop-notice p  {
-    margin: 20px;
-    text-align: center;
-} */
-/* #pop-notice {
+    width: 100%;
+    height: min-content;
     display: grid;
     grid-template-columns: 1fr;
-    position: absolute;
-    right: 40vw;
-    top: 10vh;
-    width: 200px;
-    height: 200px;
-    border-radius: var(--radius);
-    visibility: visible;
 }
-#pop-notice input {
-    justify-self: end; 
-} */
+#pop-suppr {
+    justify-self: right;
+    background-color: transparent;
+}

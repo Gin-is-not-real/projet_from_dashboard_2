@@ -4,6 +4,7 @@
 #sec-formulaire {
     width: 80%;
 }
+
 table {
     border-collapse: collapse;
     width: 100%;
@@ -11,12 +12,18 @@ table {
     --bgline-1: rgb(179, 174, 174);
     --bgline-2: rgb(169, 161, 161);
     --bghead: rgb(104, 98, 98);
-    --color: black;
+    --color: rgba(0, 0, 0, 0.809);
 
     text-align: center;
     border-radius: 10px;
     overflow: hidden;
 }
+
+#sec-table header h3, #sec-formulaire header h3{
+    margin-left: 5%;
+    color: var(--color);
+}
+
 #table-formulaire {
     background-color: var(--bgline-1);
 }
@@ -26,7 +33,6 @@ table th {
 }
 #table_operations tr {
     border: none;
-    border: var(--border-dev);
     margin: 0 2%;
 }
 #table_operations td {

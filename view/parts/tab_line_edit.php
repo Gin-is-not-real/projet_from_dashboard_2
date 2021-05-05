@@ -57,15 +57,12 @@
 
                     <!-- SUB SUPPR OP -->
                     <!-- made appear a popup who ask confirm for delete the line -->
-                    <input type="submit" class="sub-action sub-suppr disappear-on-edit" id="suppr-<?= $data['id'] ?>" name="sub-suppr-op" value="X" onclick="return displayHiddePopupConfirm('You will delete the entry n° ' + <?= $data['id'] ?> + ' ?', '#sub-suppr-' + <?= $data['id'] ?>, <?= $data['id'] ?>)" >
+                    <input type="submit" class="sub-action sub-suppr disappear-on-edit" id="suppr-<?= $data['id'] ?>" name="sub-suppr-op" value="X" onclick="return displayHiddePopupConfirm('You will delete the entry n° ' + <?= $data['id'] ?> + ' ?', '#sub-suppr-' + <?= $data['id']; ?>)" >
 
                     <form action="index.php?action=suppr-operation&amp;id=<?= $data['id'] ?>" method="post">
                         <!-- SUB SUPPR ID hidden-->
                         <!-- hidden. Is activated by clic on the "yes" button of the confirm popup-->
                         <input type="submit" class="sub-action sub-suppr disappear-on-edit" id="sub-suppr-<?= $data['id'] ?>" name="sub-suppr-op" value="X" hidden>
-
-
-
                 </form>
             </td>
 
