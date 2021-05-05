@@ -63,35 +63,5 @@ input, select, option {
     font-weight: bold;
 }
 
-.popup {
-    border-radius: 100%;
-    background-color: var(--bg-popup);
-}
-#pop-confirm {
-    visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: absolute;
-    left: 40vw;
-    top: 50vh;
-    width: 200px;
-    height: 200px;
-}
-#pop-confirm p {
-    margin: 10px;
-}
-#pop-notice {
-    display: grid;
-    grid-template-columns: 1fr;
-    /* visibility: hidden; */
-    position: absolute;
-    left: 40vw;
-    top: 50vh;
-    width: 200px;
-    height: 200px;
-}
-#pop-notice input {
-    justify-self: end;
-}
+
 

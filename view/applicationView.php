@@ -7,32 +7,9 @@ require_once('globals.php');
 <main id="main-application">
     
     <section class="sec-title">
-
         <?php include('parts/title.php'); ?>
         <p>application view</p> 
-
-        <!-- <header id="header-title">
-            <h1>Bulbs Dashboard !</h1>
-            <p>"La lumière a tout les étages !"</p>
-        </header> -->
-
     </section> 
-
-    <div class="popup" id="pop-confirm">
-        <p></p>
-        <div>
-            <input type="button" id="pop-add" value="yes">
-            <input type="button" id="pop-cancel" value="no">
-        </div>
-    </div>
-
-    <div class="popup" id="pop-notice">
-        <div>
-            <input type="button" id="pop-add" value="X">
-        </div>
-        <p>notice here</p>
- 
-    </div>
 
     <?php
         include('parts/form_operations.php');

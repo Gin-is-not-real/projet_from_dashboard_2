@@ -49,39 +49,3 @@ table th {
     background-color: var(--bgline-2);
 }
 
-/* input[id^="sub-edit-"] {
-    background-color: rgb(102, 96, 93);
-}
-input[id^="sub-suppr-"] {
-    background-color: rgb(162, 78, 69);
-}
-input[id="sub-add"] {
-    background-color: rgb(58, 114, 58);
-}
-input[id^="sub-confirm-edit-"] {
-    background-color: rgb(58, 114, 58);
-}
-input[id^="sub-cancel-edit-"] {
-    background-color: rgb(162, 78, 69);
-}
-input[type="submit"] {
-    margin: 5px;
-    padding: 0;
-    border-radius: 100%;
-    border: none;
-    height: 30px;
-    width: 30px;
-}
-tr select[disabled], tr input[disabled] {
-    -webkit-appearance: none; 
-    -moz-appearance: none; 
-    appearance: none;
-    padding: 2px 2px 2px 2px; 
-    border: none;
-    margin: 0 auto;
-    color: var(--color);
-}
-tr select, tr input[type=date] {
-    padding: 2px 2px 2px 2px; 
-    border: none;
-} */

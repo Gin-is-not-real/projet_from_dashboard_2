@@ -12,7 +12,6 @@ ob_start();
             <form action="index.php?" method="get">
                 <input type="submit" name="action" value="start-app">
             </form>
-                <!-- <a href="../index.php?action=startApp">ENTER</a> -->
         </div>
     </section>
 </main>
