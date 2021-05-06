@@ -53,6 +53,10 @@ input, select, option {
     font-weight: bold;
 }
 
+.round-super-btn {
+    height: 100px;
+    width: 100px;
+}
 .round-big-btn {
     height: 50px;
     width: 50px;

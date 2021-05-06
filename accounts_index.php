@@ -2,16 +2,13 @@
 require('controller/accountController.php');
 
 try {
-
     if(!isset($_GET['action'])) {
-        initialize();
+        // initialize();
     }
     else {
 
         if($_GET['action'] == 'connection') {
-
             if(!empty($_POST['pseudo']) && !empty($_POST['pass'])) {
-
                 connection($_POST['pseudo'], $_POST['pass']); 
             }
             else {

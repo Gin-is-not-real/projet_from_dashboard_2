@@ -1,29 +1,30 @@
-#main-registration {
-    /* display: none; */
+#main-accounts {
     /* border: 1px solid black; */
     display: flex;
     flex-flow: row wrap;
+
+    /* display: none; */
 }
 
 .accounts {
     /* border: 1px solid black; */
     background-color: #82839d95;
-    border-radius: 10px;
+    border-radius: var(--radius);
     max-width: 330px;
     margin: 2% auto;
-}
-.form-accounts {
-    height: 100%;
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
 
+    display: none;
+    /* visibility: hidden; */
 }
+.accounts * {
+}
+
 .form-accounts header {
     margin-left: 5%;
     color: var(--color);
 }
-.form-accounts section {
+.form-accounts table {
+    margin-bottom: 5%;
 }
 .form-accounts div {
     display: flex;

@@ -23,7 +23,7 @@ html {
 
     /* BORDER MARGIN */
     --border-dev: 1px solid black;
-    --border-dev: none;
+    /* --border-dev: none; */
 
     --margin-top-elts: 5%;
     --margin-header: 0 0 10% 0;

@@ -1,0 +1,53 @@
+/* SECTION TITLE */
+#main-title * {
+    margin: 0;
+}
+.sec-title, .sec-title * {
+    /* border: var(--border-dev); */
+}
+.sec-title {
+    height: max-content;
+    padding: 2%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+
+    background-color: #82839d95;
+}
+.sec-title > * {
+    padding: 2%;
+}
+.sec-title figure {
+    width: max-content;
+}
+.sec-title section {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sec-title header h1 {
+    font-size: 2em;
+}
+.sec-title header :last-child {
+    font-family: 'Caveat', cursive; 
+    font-weight: 400;
+}
+
+.sec-title div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+/* .sec-title div {
+    position: relative;
+} */
+.sec-title img {
+    /* border-radius: 100%;
+    border-radius: 10px; */
+
+}

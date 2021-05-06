@@ -4,15 +4,15 @@ ob_start();
 ?>
 
 <main id="main-home">
-    <?php include('parts/connexion.php'); ?>
+    <?php include('parts/accounts.php'); ?>
 
-    <section class="" id="section-start-app">
+    <!-- <section class="" id="section-start-app">
         <div>
             <form action="index.php?" method="get">
-                <input class="" type="submit" name="action" value="start-app">
+                <input class="round-super-btn" type="submit" name="action" value="start-app">
             </form>
         </div>
-    </section>
+    </section> -->
 </main>
 
 <?php $content = ob_get_clean(); ?>

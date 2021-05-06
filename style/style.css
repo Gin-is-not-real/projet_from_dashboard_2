@@ -46,31 +46,7 @@ section {
     margin-left: 5%;
     color: var(--color);
 }
-/* SECTION TITLE */
-.sec-title, .sec-title * {
-    /* border: var(--border-dev); */
-}
-.sec-title {
-    width: 80%;
-    height: max-content;
 
-    /* padding: 5%; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-}
-.sec-title figure {
-    width: 100%;
-
-    background-color: #82839d95;
-    border-radius: 10px;
-}
-.sec-title img {
-    border-radius: 100%;
-    border-radius: 10px;
-
-}
 
 /* HOME */
 #main-home {

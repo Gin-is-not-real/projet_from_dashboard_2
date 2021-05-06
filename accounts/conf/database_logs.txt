@@ -1,5 +1,0 @@
-name: "nom du site"
-path: "path (index)"
-host: localhost
-user: root
-pass: root

@@ -1,17 +1,25 @@
 <?php
+require_once('ConnectionManager.php');
 require_once('./globals.php');
 
 class AccountManager extends ConnectionManager {
     public $basename;
     public $tablename;
-    public $connectManager;
+    // public $connectManager;
     public $dbPDO;
 
     public function __construct() {
-        $this->connectManager = new ConnectionManager();
+        // $this->connectManager = new ConnectionManager();
         $this->basename = $GLOBALS['basename'];
         $this->tablename = $GLOBALS['log-tablename'];
-        $this->dbPDO = $this->connectManager->connectBase();
+        // $this->dbPDO = $this->connectManager->connectBase();
+        $this->dbPDO = $this->connectBase();
+
+    }
+
+    public function init() {
+        $this->initDatabase();
+        $this->initAccountsTable();
     }
 
     public function getLogs($pseudo) {

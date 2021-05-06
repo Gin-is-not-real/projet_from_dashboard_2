@@ -4,7 +4,9 @@ require_once('model/AccountManager.php');
 session_start();
 
 function goToSite() {
-    header('Location: ' . $GLOBALS['sitepath'] . '?visitor_location=site');
+    // header('Location: ' . $GLOBALS['sitepath'] . '?visitor_location=site');
+    header('Location: index.php?action=start-app');
+
 }
 
 function initialize() {
@@ -16,7 +18,7 @@ function deconnection() {
     $_SESSION['pseudo'] = array();
     session_destroy();
 
-    // goToSite();
+    goToSite();
 }
 
 function connection($pseudo, $pass) {

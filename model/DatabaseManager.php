@@ -9,11 +9,6 @@ class DatabaseManager {
         $this->dbname = $GLOBALS['basename'];
         $this->tabname = $GLOBALS['log-tablename'];
     }
-
-    public function dbConnect() {
-        $db = new PDO("mysql:host=localhost;dbname=$this->dbname;charset=utf8", $GLOBALS['username'], $GLOBALS['password'], array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-        return $db;
-    }
     
     function initDatabase() {
         $conn = new mysqli($GLOBALS['servername'], $GLOBALS['username'], $GLOBALS['password']);
@@ -54,5 +49,4 @@ class DatabaseManager {
         $conn->close();
     }
 }
-
 ?>
