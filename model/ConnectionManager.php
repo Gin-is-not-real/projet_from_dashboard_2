@@ -32,35 +32,6 @@ class ConnectionManager {
         return $pdoConnect;
     }
 
-    function checkTable() {
-        $serv = $this->connectServer();
-        $tabname = $this->tablename;
-        $req = $serv->query("SELECT count(*) as s FROM information_schema.tables WHERE table_schema = " . $this->basename . "AND table_name =" . $tabname);
-    
-        if($req->fetch()['s'] > 0) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-
-    private function createBase() {
-        $serv = $this->connectServer();
-        $req = "CREATE DATABASE IF NOT EXISTS $this->basename";
-        $serv->exec($req);  
-    }
-
-    private function createTable() {
-        $db = $this->connectBase();
-        $req = "CREATE TABLE IF NOT EXISTS $this->tablename({$GLOBALS['fields']})";
-        $db->exec($req);
-    }
-
-
-
-
-
 
 }
 

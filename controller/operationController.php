@@ -36,8 +36,6 @@ require_once('model/EntryManager.php');
             // echo "<script>alert(\'Unable to record operation: field(s) ' . $notice . ' void</script>";
             throw new Exception('Unable to record operation, ' . $notice);
         }
-
-
     }
 
     function removeOperation($id) {

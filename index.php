@@ -11,9 +11,6 @@ try {
     }
     else {  
         if($_GET['action'] == 'start-app') {
-            // if(isset($_GET['notice'])) {
-            //     $notice = $_GET['notice'] . '</br>';
-            // }
             listOperations();
         }
 
@@ -29,7 +26,6 @@ try {
 
         elseif($_GET['action'] == 'suppr-operation') {
             if(!empty($_POST['sub-suppr-op']) ) {
-                // echo "suppr-operation " . $_POST['sub-suppr-op'] . " " . $_GET['id'] .'</br>';
                 removeOperation($_GET['id']);
             }
             else {
@@ -58,7 +54,6 @@ try {
         }
 
         else if($_GET['action'] == 'cancel-edit-operation') {
-            // $notice = "cancel-edit " .'</br>';
             $_GET['id'] = '';
             listOperations();
         }

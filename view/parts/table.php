@@ -1,4 +1,4 @@
-<section id="sec-table">
+<section id="sec-table" class="centred-section">
 <!-- <section class="sec-title">
     <header>
         <h4>view operations</h4>

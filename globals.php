@@ -4,6 +4,7 @@ $GLOBALS['username'] = 'admin';
 $GLOBALS['password'] = 'admin';
 $GLOBALS['basename'] = 'bulbs_dashboard';
 $GLOBALS['tablename'] = 'bulbs_dash';
+$GLOBALS['log-tablename'] = 'log_bulbs_dash';
 
 $GLOBALS['sitename'] = "";
 $GLOBALS['homeview'] = "view/homeView.php";

@@ -6,8 +6,8 @@ class DatabaseManager {
     protected $tabname;
 
     function __construct() {
-        $this->dbname = $GLOBALS['dbname'];
-        $this->tabname = $GLOBALS['tabname'];
+        $this->dbname = $GLOBALS['basename'];
+        $this->tabname = $GLOBALS['log-tablename'];
     }
 
     public function dbConnect() {
@@ -18,7 +18,7 @@ class DatabaseManager {
     function initDatabase() {
         $conn = new mysqli($GLOBALS['servername'], $GLOBALS['username'], $GLOBALS['password']);
         if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error . '<br/>' . "please check accounts\globals.php and edit the file with host, user ect..");
+        die("Connection failed: " . $conn->connect_error . '<br/>' . "please check globals.php and edit the file with host, user ect..");
         }
     
         $sql = "CREATE DATABASE $this->dbname";
@@ -37,7 +37,8 @@ class DatabaseManager {
             die("Connection failed:" . $conn->connect_error . '<br/>');
         }
     
-        $sql = "CREATE TABLE accounts_gam(
+        // $sql = "CREATE TABLE $this->tabname(
+        $sql = "CREATE TABLE $this->tabname(
             id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
             pseudo VARCHAR(30) NOT NULL,
             mail VARCHAR(50) NOT NULL,
@@ -50,7 +51,6 @@ class DatabaseManager {
         } else {
             echo "Error creating table: " . $conn->error . '<br/>';
         }
-    
         $conn->close();
     }
 }

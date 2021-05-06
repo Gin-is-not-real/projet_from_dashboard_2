@@ -6,37 +6,32 @@
     font-style: normal;
 }   
 
-
-
 input[type="submit"], .popup input {
     margin: 5px;
     padding: 0;
     border-radius: 100%;
     border: none;
-    height: 30px;
-    width: 30px;
 }
 
 input[id*="edit-"] {
-    background-color: var(--bgbtn-neutral);
+    /* background-color: var(--bgbtn-neutral); */
 }
 input[id*="suppr-"] {
-    background-color: var(--bgbtn-red);
+    /* background-color: var(--bgbtn-red); */
 }
 input[id*="add"] {
-    background-color: var(--bgbtn-green);
+    /* background-color: var(--bgbtn-green); */
 }
 input[id*="cancel"] {
-    background-color: var(--bgbtn-red);
+    /* background-color: var(--bgbtn-red); */
 }
 input[id*="confirm-edit-"] {
-    background-color: var(--bgbtn-green);
-    height: 50px;
-    width: 50px;
+    /* background-color: var(--bgbtn-green); */
+    /* height: 50px; */
+    /* width: 50px; */
 }
 input[id*="cancel-edit"] {
-    height: 50px;
-    width: 50px;
+
 }
 
 tr select[disabled], tr input[disabled] {
@@ -58,5 +53,21 @@ input, select, option {
     font-weight: bold;
 }
 
-
+.round-big-btn {
+    height: 50px;
+    width: 50px;
+}
+.round-little-btn {
+    height: 30px;
+    width: 30px;
+}
+.green {
+    background-color: var(--bgbtn-green);
+}
+.red {
+    background-color: var(--bgbtn-red);
+}
+.neutral {
+    background-color: var(--bgbtn-neutral);
+}
 

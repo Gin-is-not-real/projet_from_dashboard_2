@@ -1,4 +1,4 @@
-<section id="sec-formulaire">
+<section id="sec-formulaire" class="centred-section">
 
     <form id="form-operation-add" action="index.php?action=add-operation" method="post">
         <header>
@@ -6,7 +6,6 @@
         </header>
 
             <table id="table-formulaire">
-
                 <tr>
                     <th>Date</th>
                     <th>Floor</th>
@@ -54,7 +53,7 @@
                     </td>
     
                     <td id="td-actions">
-                        <input type="submit" name="sub-add-op" value="add" id="sub-add">
+                        <input type="submit" class="round-little-btn green" name="sub-add-op" value="add" id="sub-add">
                     </td>
 
             </table>

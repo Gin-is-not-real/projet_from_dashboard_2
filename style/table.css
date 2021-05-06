@@ -1,41 +1,21 @@
-#sec-table {
-    width: 80%;
-}
-#sec-formulaire {
-    width: 80%;
-}
-
 table {
     border-collapse: collapse;
     width: 100%;
-
-    --bgline-1: rgb(179, 174, 174);
-    --bgline-2: rgb(169, 161, 161);
-    --bghead: rgb(104, 98, 98);
-    --color: rgba(0, 0, 0, 0.809);
-
     text-align: center;
     border-radius: 10px;
     overflow: hidden;
-}
-
-#sec-table header h3, #sec-formulaire header h3{
-    margin-left: 5%;
-    color: var(--color);
-}
-
-#table-formulaire {
     background-color: var(--bgline-1);
 }
-table th {
+
+th {
     padding: 1% 0;
     background-color: var(--bghead);
 }
-#table_operations tr {
+tr {
     border: none;
     margin: 0 2%;
 }
-#table_operations td {
+td {
     margin: 2% 0;
 }
 #td-actions {
@@ -47,11 +27,10 @@ table th {
     margin: 0;
 }
 
-
-.color1, .color1 input, .color1 select {
+.color1, .color1 input:not(.green, .red, .neutral), .color1 select {
     background-color: var(--bgline-1);
 }
-.color2, .color2 input, .color2 select {
+.color2, .color2 input:not(.green, .red, .neutral), .color2 select {
     background-color: var(--bgline-2);
 }
 

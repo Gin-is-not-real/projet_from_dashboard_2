@@ -1,15 +1,4 @@
-body {
-    --bgbtn-green: rgb(58, 114, 58);
-    --bgbtn-red: rgb(162, 78, 69);
-    --bgbtn-neutral: rgb(102, 96, 93);
-    --bg-popup: rgba(124, 39, 36, 0.926);
-    /* --bg-popup: #63a22fd2; */
-
-    --bg-popup-hover: rgb(124, 39, 36);
-    --radius: 10px;
-}
-
-#sec-deco {
+/* #sec-deco {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -25,7 +14,7 @@ body {
     float: left;
     top: -50px;
     left: -20px; 
-}
+} */
 
 /* POPUPS */
 #main-popups {

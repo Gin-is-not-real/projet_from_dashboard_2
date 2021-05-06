@@ -4,12 +4,12 @@ ob_start();
 ?>
 
 <main id="main-home">
+    <?php include('parts/connexion.php'); ?>
 
-    <section class="sec-title" id="section-start-app">
-        
+    <section class="" id="section-start-app">
         <div>
             <form action="index.php?" method="get">
-                <input type="submit" name="action" value="start-app">
+                <input class="" type="submit" name="action" value="start-app">
             </form>
         </div>
     </section>
