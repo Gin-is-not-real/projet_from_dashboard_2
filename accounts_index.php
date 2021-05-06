@@ -1,15 +1,16 @@
 <?php
 require('controller/accountController.php');
+require_once('controller/frontController.php');
 
 try {
     if(!isset($_GET['action'])) {
-        // initialize();
+        goToHomeView();
     }
     else {
 
         if($_GET['action'] == 'connection') {
             if(!empty($_POST['pseudo']) && !empty($_POST['pass'])) {
-                connection($_POST['pseudo'], $_POST['pass']); 
+                connection($_POST['pseudo'], $_POST['pass']);
             }
             else {
                 throw new Exception('Tout les champs ne sont pas remplis !');

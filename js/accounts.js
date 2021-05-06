@@ -1,7 +1,13 @@
 const btn_deconnection = document.getElementById("btn-deconnection");
+btn_deconnection.addEventListener("click", function() {
+    
+})
+
 const btn_home = document.getElementById("btn-home");
+
 const btn_connection = document.getElementById("btn-connection");
 btn_connection.targetSection = document.getElementById("sec-connection");
+
 const btn_registration = document.getElementById("btn-registration");
 btn_registration.targetSection = document.getElementById("sec-registration");
 
@@ -12,11 +18,11 @@ btns_accounts.forEach(btn => {
     })
 })
 
-window.onload = function() {
+const pageLoad = function() {
     let path = window.location.pathname;
-    console.log(path);
+    console.log("path", path);
 
-    if(!path.includes("index")) {
+    if(path.includes("accounts") || !path.includes("index")) {
         document.querySelectorAll(".visible-on-home").forEach(btn => {
             btn.style.display = "block";
         });
@@ -35,6 +41,7 @@ window.onload = function() {
         });
     }
 }
+pageLoad();
 
 function displaySection(btn) {
     btns_accounts.forEach(b => {

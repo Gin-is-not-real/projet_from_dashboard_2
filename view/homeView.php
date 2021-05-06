@@ -16,4 +16,4 @@ ob_start();
 </main>
 
 <?php $content = ob_get_clean(); ?>
-<?php require_once('parts/template.php'); ?>
+<?php require('parts/template.php'); ?>

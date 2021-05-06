@@ -15,9 +15,11 @@
 
                 <input class="round-super-btn visible-on-home" id="btn-registration" type="submit" name="action" value="INSCRIPTION">
 
-                <input class="round-super-btn visible-on-app" id="btn-home" type="submit" name="action" value="HOME">
+                <a href="accounts_index.php">
+                    <input class="round-super-btn visible-on-app" id="btn-home" type="submit" name="action" value="HOME">
+                </a>
 
-                <input class="round-super-btn visible-on-app" id="btn-deconnection" type="submit" name="action" value="DECONNECTION">
+                <a href="accounts_index.php?action=deconnection"><input class="round-super-btn visible-on-app" id="btn-deconnection" type="submit" name="action" value="DECONNECTION"></a>
 
                 <!-- <input class="round-super-btn" type="submit" name="action" value="start-app"> -->
             </div>

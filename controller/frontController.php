@@ -3,7 +3,7 @@ require_once('globals.php');
 
 function goToHomeView() {
     // header('Location: view/homeView.php?visitor_location=home');
-    require_once('view/homeView.php');
+    require('view/homeView.php');
     exit();
 }
 

@@ -1,6 +1,6 @@
 <?php
 require_once('model/AccountManager.php');
-
+require_once('controller/frontController.php');
 session_start();
 
 function goToSite() {
@@ -18,7 +18,7 @@ function deconnection() {
     $_SESSION['pseudo'] = array();
     session_destroy();
 
-    goToSite();
+    goToHomeView();
 }
 
 function connection($pseudo, $pass) {
@@ -28,14 +28,18 @@ function connection($pseudo, $pass) {
     if($data = $logsDb->fetch()) {
         if($pass == $data['pass']) {
             $_SESSION['pseudo'] = $pseudo;
+            // goToSite();
         }    
         else {    
             $_POST['log-notice'] = 'Les mots de passe doivent être identiques';
+            goToHomeView();
             // header('Location: view/accountView.php?log-notice=wrongInputs&visitor_location=accountView');
         }
     }
     else { 
         $_POST['log-notice'] = 'Pseudo ou mot de passe incorrect !';
+        goToHomeView();
+
         // header('Location: view/accountView.php?log-notice=wrongInputs&visitor_location=accountView');
     }       
 }
@@ -46,17 +50,19 @@ function registration($pseudo, $mail, $pass, $pass_repeat) {
 
     if($pass != $pass_repeat) {
         $_POST['log-notice'] = 'Les mots de passe doivent être identiques';
+        goToHomeView();
         // header('Location: view/accountView.php?log-notice=wrongPassRepeat&visitor_location=accountView');
     }
     elseif($data = $logsDb->fetch()) {
         $_POST['log-notice'] = 'Pseudo déja pris';
+        goToHomeView();
         // header('Location: view/accountView.php?log-notice=pseudoNotAvailable&visitor_location=accountView');   
     }
     else {
         $accountManager->insertLogs($pseudo, $mail, $pass);
         //header("Location: view/siteView.php");       
-        $_SESSION['pseudo'] = $pseudo;      
+        $_SESSION['pseudo'] = $pseudo; 
     }
-    goToSite();
+
 }
 
