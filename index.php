@@ -7,7 +7,9 @@ require_once('controller/frontController.php');
 */
 try {
     if(!isset($_GET['action'])) {
-        goToHomeView();
+        header('Location: accounts_index.php?session-state=first-load');
+        // goToHomeView();
+        // goToHomeView('first-load');
     }
     else {  
         if($_GET['action'] == 'start-app') {
@@ -17,7 +19,6 @@ try {
         elseif($_GET['action'] == 'add-operation') {
             if(!empty($_POST['sub-add-op']) ) {
                 addOperation();
-
             }
             else {
                 throw new Exception('Something\'s wrong: index action add-opp: empty($_POST[\'sub-add-op\'])</br>');

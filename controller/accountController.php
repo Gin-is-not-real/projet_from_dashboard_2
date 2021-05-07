@@ -1,7 +1,10 @@
 <?php
 require_once('model/AccountManager.php');
 require_once('controller/frontController.php');
-session_start();
+
+if(session_id() == '') {
+    session_start();
+}
 
 function goToSite() {
     // header('Location: ' . $GLOBALS['sitepath'] . '?visitor_location=site');
@@ -15,7 +18,8 @@ function initialize() {
 }
 
 function deconnection() {
-    $_SESSION['pseudo'] = array();
+    // $_SESSION['pseudo'] = array();
+    unset($_SESSION['pseudo']);
     session_destroy();
 
     goToHomeView();
@@ -28,19 +32,15 @@ function connection($pseudo, $pass) {
     if($data = $logsDb->fetch()) {
         if($pass == $data['pass']) {
             $_SESSION['pseudo'] = $pseudo;
-            // goToSite();
         }    
         else {    
-            $_POST['log-notice'] = 'Les mots de passe doivent être identiques';
+            $_POST['log-error'] = 'Wrong password or pseudo';
             goToHomeView();
-            // header('Location: view/accountView.php?log-notice=wrongInputs&visitor_location=accountView');
         }
     }
     else { 
-        $_POST['log-notice'] = 'Pseudo ou mot de passe incorrect !';
+        $_POST['log-error'] = 'Wrong password or pseudo';
         goToHomeView();
-
-        // header('Location: view/accountView.php?log-notice=wrongInputs&visitor_location=accountView');
     }       
 }
 
@@ -49,12 +49,12 @@ function registration($pseudo, $mail, $pass, $pass_repeat) {
     $logsDb = $accountManager->getLogs($pseudo);
 
     if($pass != $pass_repeat) {
-        $_POST['log-notice'] = 'Les mots de passe doivent être identiques';
+        $_POST['log-error'] = 'The two passwords must be identical';
         goToHomeView();
         // header('Location: view/accountView.php?log-notice=wrongPassRepeat&visitor_location=accountView');
     }
     elseif($data = $logsDb->fetch()) {
-        $_POST['log-notice'] = 'Pseudo déja pris';
+        $_POST['log-error'] = 'This pseudo is not available';
         goToHomeView();
         // header('Location: view/accountView.php?log-notice=pseudoNotAvailable&visitor_location=accountView');   
     }

@@ -23,7 +23,7 @@
                 </table>
             </section>
             <div>
-                <input class="round-super-btn green" type="submit" value="CONNECTION">
+                <input class="round-super-btn green" type="submit" value="LOG IN">
             </div>
         </form>
     </section>

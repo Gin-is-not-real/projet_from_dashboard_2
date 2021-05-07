@@ -1,9 +1,17 @@
 <?php
 require('controller/accountController.php');
 require_once('controller/frontController.php');
-
+if(session_id() == '') {
+    session_start();
+}
 try {
     if(!isset($_GET['action'])) {
+        if(isset($_GET['session-state']) AND $_GET['session-state'] == 'first-load') {
+            if(session_id() !== '') {
+                unset($_SESSION['pseudo']);
+                session_destroy();
+            }
+        }
         goToHomeView();
     }
     else {

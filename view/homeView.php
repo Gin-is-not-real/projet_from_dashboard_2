@@ -4,7 +4,6 @@ ob_start();
 ?>
 
 <main id="main-home">
-    <?php include('parts/accounts.php'); ?>
 
     <!-- <section class="" id="section-start-app">
         <div>

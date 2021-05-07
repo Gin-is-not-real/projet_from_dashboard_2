@@ -27,7 +27,9 @@ body {
     margin: 0 auto;
     background-color: var(--bgcolor-1);
 }
-
+body * {
+    /* border: var(--border-dev); */
+}
 main {
     width: 100%;
 }
@@ -47,7 +49,6 @@ section {
     color: var(--color);
 }
 
-
 /* HOME */
 #main-home {
     display: flex;
@@ -62,7 +63,6 @@ section {
     justify-self: center;
     margin-top: var(--margin-top-elts);
 }
-
 
 #main-application {
     height: auto;

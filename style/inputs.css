@@ -52,11 +52,15 @@ input, select, option {
     font-family: 'Sansation';
     font-weight: bold;
 }
-
 .round-super-btn {
-    height: 100px;
-    width: 100px;
+    height: 75px;
+    width: 75px;
 }
+/* .round-super-btn {
+    height: 30px;
+    width: 90px;
+    border-radius: 10px !important;
+} */
 .round-big-btn {
     height: 50px;
     width: 50px;
@@ -64,6 +68,9 @@ input, select, option {
 .round-little-btn {
     height: 30px;
     width: 30px;
+}
+a {
+    font-size: 50%;
 }
 .green {
     background-color: var(--bgbtn-green);

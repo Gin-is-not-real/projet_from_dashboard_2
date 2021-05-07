@@ -10,7 +10,7 @@ function goToHomeView() {
 function goToApplicationView() {
     // header('Location: view/applicationView.php?visitor_location=application');
 
-    header('Location: view/applicationView.php?action=cancel-edit;visitor_location=application');
+    header('Location: view/applicationView.php');
 
     exit();
 }
