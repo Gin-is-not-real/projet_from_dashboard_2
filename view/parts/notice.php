@@ -20,7 +20,8 @@ $btns = array();
                 array_push($btns, $btn_connect, $btn_register);
             }
             else {
-                $_POST['r-notice'] = "You are logged in as <strong>" . $_SESSION['pseudo'] . "</strong>.";
+                $_POST['r-notice'] = "You are logged in as <strong>" . $_SESSION['pseudo'] . "</strong>";
+                $_POST['notification'] = 'Vous avez été correctement connecté en tant que <strong>' . $_SESSION['pseudo']  . "</strong>";
 
                 // $_POST['log-notice'] = "You are logged in as <strong>" . $_SESSION['pseudo'] . "</strong>.";
                 // array_push($btns, $btn_deconnect);
@@ -39,21 +40,19 @@ $btns = array();
                         echo $input;
                     }
                 ?>
-                <!-- <input class="round-super-btn visible-on-home" id="btn-connection" type="submit" name="action" value="CONNECTION"> -->
+            </div>
 
-                <!-- <input class="round-super-btn visible-on-home" id="btn-registration" type="submit" name="action" value="INSCRIPTION"> -->
-
-                <!-- <a href="accounts_index.php">
-                    <input class="round-super-btn visible-on-app" id="btn-home" type="submit" name="action" value="HOME">
-                </a> -->
-
-                <!-- <a href="accounts_index.php?action=deconnection"><input class="round-super-btn" id="btn-deconnection" type="submit" name="action" value="DECONNECTION"></a> -->
-
-                <!-- <input class="round-super-btn" type="submit" name="action" value="start-app"> -->
+            <div id="div-notif">
+                <?php
+                    if(isset($_POST['notification'])) {
+                        echo $_POST['notification'] .'</br>';
+                    }
+                ?>
             </div>
 
             <div id="div-error">
                 <?php
+
                     if(isset($_POST['log-error'])) {
                         echo  $_POST['log-error'] .'</br>';
                     }
