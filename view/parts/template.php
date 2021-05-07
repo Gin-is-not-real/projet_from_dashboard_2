@@ -16,7 +16,7 @@
     </head>
 
     <body>
-        <?php include('popups.php'); ?>
+        <?php include('pop_confirm.php'); ?>
 
         <?php include('title.php'); ?>
 

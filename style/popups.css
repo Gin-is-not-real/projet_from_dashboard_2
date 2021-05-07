@@ -1,30 +1,17 @@
-/* #sec-deco {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-#div-deco {
-    height: 300px;
-    width: 300px;
-
-    border-radius: 100%;
-    background-color: #42404b38;
-    
-    position: relative;
-    float: left;
-    top: -50px;
-    left: -20px; 
-} */
-
 /* POPUPS */
 #main-popups {
     display: none;
+    visibility: hidden;
     position: absolute;
+    left: 0;
     width: 100vw;
-    max-width: 900px;
+    /* max-width: 900px; */
     height: 100%;
     background-color: transparent;
-    z-index: 1;
+    z-index: 5;
+
+    display: flex;
+    flex-direction: row;
 }
 .popup {
     /* visibility: hidden; */
@@ -45,22 +32,23 @@
     text-align: center;
 }
 #pop-confirm {
-    position: relative;
-    margin-top: 25%;
+    visibility: hidden;
+    display: none;
+    position: fixed;
+    top: 50vh;
+    left: 35vw;
 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-content: center;
 
+    /* z-index: 1; */
 }
 #pop-confirm:hover {
     background-color: var(--bg-popup-hover);
 }
-/* #pop-confirm p {
-    margin: 20px;
-    text-align: center;
-} */
+
 #pop-confirm div {
     /* margin: 10px; */
     display: flex;

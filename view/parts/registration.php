@@ -40,7 +40,7 @@
         </section>
 
             <div>
-                <input class="round-super-btn green" type="submit" value="REGISTRATION" >
+                <input class="round-super-btn green" type="submit" value="REGISTER" >
             </div>
         </form>
     </section>

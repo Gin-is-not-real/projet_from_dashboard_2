@@ -25,7 +25,8 @@
         popupConfirm.childNodes[1].textContent = txt;
         // msgConfirm.textContent = txt + " " + opId;
 
-        popupsMain.style.display = "block";
+        // popupsMain.style.display = "block";
+        popupConfirm.style.display = popupConfirm.style.display == 'flex' ? 'none' : 'flex'; 
         popupConfirm.style.visibility = popupConfirm.style.visibility =='visible' ? 'hidden' : 'visible';
         let target = document.querySelector(qSelector);
         popYes.addEventListener("click", function() {
