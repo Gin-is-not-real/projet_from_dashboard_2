@@ -7,31 +7,10 @@
 }   
 
 input[type="submit"], .popup input {
-    margin: 5px;
+    /* margin: 5px;
     padding: 0;
     border-radius: 100%;
-    border: none;
-}
-
-input[id*="edit-"] {
-    /* background-color: var(--bgbtn-neutral); */
-}
-input[id*="suppr-"] {
-    /* background-color: var(--bgbtn-red); */
-}
-input[id*="add"] {
-    /* background-color: var(--bgbtn-green); */
-}
-input[id*="cancel"] {
-    /* background-color: var(--bgbtn-red); */
-}
-input[id*="confirm-edit-"] {
-    /* background-color: var(--bgbtn-green); */
-    /* height: 50px; */
-    /* width: 50px; */
-}
-input[id*="cancel-edit"] {
-
+    border: none; */
 }
 
 tr select[disabled], tr input[disabled] {
@@ -52,33 +31,63 @@ input, select, option {
     font-family: 'Sansation';
     font-weight: bold;
 }
-.round-super-btn {
-    height: 75px;
-    width: 75px;
-}
-/* .round-super-btn {
-    height: 30px;
-    width: 90px;
-    border-radius: 10px !important;
-} */
-.round-big-btn {
-    height: 50px;
-    width: 50px;
-}
-.round-little-btn {
-    height: 30px;
-    width: 30px;
-}
+
 a {
     font-size: 50%;
 }
+.round-btn {
+    margin: 5px;
+    padding: 0;
+    border-radius: 100%;
+    border: none;
+}
+.round-btn:hover {
+    text-shadow: 1px 0 0 black;
+    color: var(--colorbtn-blue-hover);
+    
+}
+.super {
+    height: 75px;
+    width: 75px;
+}
+.big {
+    height: 50px;
+    width: 50px;
+}
+.little {
+    height: 30px;
+    width: 30px;
+}
+
 .green {
     background-color: var(--bgbtn-green);
+    color: var(--color);
 }
+.green:hover {
+    background-color: var(--bgbtn-green-hover);
+    color: var(--colorbtn-blue-hover);
+}
+
 .red {
     background-color: var(--bgbtn-red);
 }
+.red:hover {
+    background-color: var(--bgbtn-red-hover);
+}
+
 .neutral {
     background-color: var(--bgbtn-neutral);
+}
+.neutral:hover {
+    background-color: var(--bgbtn-neutral-hover);
+    
+}
+.blue {
+    background-color: var(--bgbtn-blue);
+    color: var(--colorbtn-blue);
+}
+.blue:hover {
+    color: var(--colorbtn-blue-hover);
+    background-color: #353868;
 }
 

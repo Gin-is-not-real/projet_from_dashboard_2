@@ -26,8 +26,6 @@ class EntryManager extends ConnectionManager {
         } catch (Exception $e) {
             die('Error on recordEntry(): ' . $e->getMessage());
         }
-        echo "opération \"change " . $cost . " on the " . $room . " at " . $b_floor . " " . $GLOBALS['msg_record_ok'] . '</br>';
-        
         return $affectedLines;
     }
 

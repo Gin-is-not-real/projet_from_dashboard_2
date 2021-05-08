@@ -9,8 +9,9 @@
     let popNo = document.querySelector("#pop-cancel");
     popNo.addEventListener("click", function() {
         popupConfirm.style.visibility = "hidden";
-        popupsMain.style.display = "none";
-        disableAllOthers(onEditId, false);
+        popupConfirm.style.display = "none";
+        // popupsMain.style.display = "none";
+        // disableAllOthers(onEditId);
     })
 
     /*
@@ -23,9 +24,8 @@
     */
     function displayHiddePopupConfirm(txt, qSelector, opId) {
         popupConfirm.childNodes[1].textContent = txt;
-        // msgConfirm.textContent = txt + " " + opId;
+        onEditId = opId;
 
-        // popupsMain.style.display = "block";
         popupConfirm.style.display = popupConfirm.style.display == 'flex' ? 'none' : 'flex'; 
         popupConfirm.style.visibility = popupConfirm.style.visibility =='visible' ? 'hidden' : 'visible';
         let target = document.querySelector(qSelector);
@@ -86,6 +86,11 @@
             elt.className += " on-edit";
             elt.className = !elt.className.includes("on-edit") ? elt.className + " on-edit" : elt.className;
             elt.disabled = false;
+            console.log(elt.tagName);
+
+            if(elt.tagName == "INPUT" || elt.tagName == "SELECT") {
+                elt.style.backgroundColor = "white";
+            }
         });
     }
 
@@ -121,6 +126,10 @@
         elements.forEach(elt => {
             elt.className = elt.className.includes("on-edit") ? elt.className.replace("on-edit", "") : elt.className;
             elt.disabled = true;
+
+            if(elt.tagName == "INPUT" || elt.tagName == "SELECT") {
+                elt.style.backgroundColor = "";
+            }
         })
     }
 

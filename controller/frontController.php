@@ -14,3 +14,15 @@ function goToApplicationView() {
 
     exit();
 }
+
+function getNotif() {
+    $notif = '';
+    forEach($GLOBALS['form_fields'] as $field) {
+
+        if(isset($_POST[$field])) {
+            $notif .= $_POST[$field] . " ";
+        }
+    }
+    $GLOBALS['notif'] = $notif;
+    return $notif;
+}

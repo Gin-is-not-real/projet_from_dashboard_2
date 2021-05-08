@@ -17,6 +17,7 @@
 
     <body>
         <?php include('pop_confirm.php'); ?>
+        <?php include('pop_notice.php'); ?>
 
         <?php include('title.php'); ?>
 

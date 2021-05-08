@@ -1,6 +1,7 @@
 <?php 
 require_once('globals.php');
 require_once('model/EntryManager.php');
+
     function listOperations() {
         $opManager = new EntryManager();
         $operations = $opManager->getEntries();
@@ -16,10 +17,8 @@ require_once('model/EntryManager.php');
                 $notice .+ $field . " ";
             }
         }
-        if($notice == "") {
+        if($notice === "") {
             $opManager = new EntryManager();
-            // $affectedLines = $opManager->recordEntry($dateOp, $b_floor, $room, $cost);
-            // $affectedLines = $opManager->recordEntry($_POST['sel-floor'], $_POST['sel-room'], $_POST['sel-cost']);
             $affectedLines = $opManager->recordEntry();
     
             if($affectedLines === false) {
@@ -27,7 +26,6 @@ require_once('model/EntryManager.php');
                 throw new Exception('Unable to record operation');
             }
             else {
-                // echo $GLOBALS['msg_record_ok'];
                 header('Location: index.php?action=start-app&notice=op-added');
                 // require_once('view/applicationView.php');
             }

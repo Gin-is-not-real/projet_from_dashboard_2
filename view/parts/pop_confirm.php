@@ -4,8 +4,8 @@
             <section>
                 <p>confirm ?</p>
                 <div>
-                    <input type="button" class="round-little-btn green" id="pop-add" value="yes">
-                    <input type="button" class="round-little-btn red" id="pop-cancel" value="no">
+                    <input type="button" class="round-btn little green" id="pop-add" value="yes">
+                    <input type="button" class="round-btn little red" id="pop-cancel" value="no">
                 </div>
             </section>
         </div>

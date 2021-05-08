@@ -9,7 +9,7 @@
 
 html {
     height: 200vh;
-    min-height: min-content;
+    min-height: max-content;
     margin: 0;
     padding: 0;
 

@@ -1,31 +1,45 @@
 <?php 
+require_once('controller/frontController.php');
 if(session_id() == '') {
     session_start();
 }
-$btn_connect = '<input class="round-super-btn visible-on-home" id="btn-connection" type="submit" name="action" value="LOG IN">';
-$btn_register = '<input class="round-super-btn visible-on-home" id="btn-registration" type="submit" name="action" value="REGISTER">';
-$btn_home = '<a href="accounts_index.php"><input class="round-super-btn visible-on-app" id="btn-home" type="submit" name="action" value="HOME"></a>';
-$btn_deconnect = '<a href="accounts_index.php?action=deconnection"><input class="round-super-btn" id="btn-deconnection" type="submit" name="action" value="LOG OUT"></a>';
+$btn_connect = '<input class="round-btn super blue visible-on-home" id="btn-connection" type="submit" name="action" value="LOG IN">';
+$btn_register = '<input class="round-btn super blue visible-on-home" id="btn-registration" type="submit" name="action" value="REGISTER">';
+$btn_home = '<a href="accounts_index.php"><input class="round-btn super visible-on-app" id="btn-home" type="submit" name="action" value="HOME"></a>';
+$btn_deconnect = '<a href="accounts_index.php?action=deconnection"><input class="round-btn super" id="btn-deconnection" type="submit" name="action" value="LOG OUT"></a>';
 $btns = array();
 ?>
 
 <div id="notice">
     <div>
         <?php 
+
+        if(isset($_GET['notice'])) {
+            if($_GET['notice'] == 'op-added') {
+                $_POST['notification'] = "The operation has been successfully <strong>recorded</strong> ";
+            }
+            else if($_GET['notice'] == 'op-suppr') {
+                $_POST['notification'] = "The operation has been successfully <strong>deleted</strong> ";
+            }
+            else if($_GET['notice'] == 'op-update') {
+                $_POST['notification'] = "The operation has been successfully <strong>updated</strong> ";
+            }
+        }
+        else {
             if(!isset($_SESSION['pseudo'])) {
                 $_POST['log-notice'] = 'You must log in or register to access the application';
-
                 // $_POST['log-notice'] = '<p>You must  ' . $btn_connect . '  or  '  . $btn_register . '  to access the application';
 
                 array_push($btns, $btn_connect, $btn_register);
             }
             else {
-                $_POST['r-notice'] = "You are logged in as <strong>" . $_SESSION['pseudo'] . "</strong>";
-                $_POST['notification'] = 'Vous avez été correctement connecté en tant que <strong>' . $_SESSION['pseudo']  . "</strong>";
+                $_POST['notification'] = "you have been successfully logged in as <strong>" . $_SESSION['pseudo'] . "</strong>.";
 
-                // $_POST['log-notice'] = "You are logged in as <strong>" . $_SESSION['pseudo'] . "</strong>.";
+                // $_POST['log-notice'] = "you have been successfully logged in as <strong>" . $_SESSION['pseudo'] . "</strong>.";
                 // array_push($btns, $btn_deconnect);
             }
+        }
+
 
             if(isset($_POST['log-notice'])) {
                 echo $_POST['log-notice'] . '</br>';

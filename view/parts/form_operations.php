@@ -53,7 +53,7 @@
                     </td>
     
                     <td id="td-actions">
-                        <input type="submit" class="round-little-btn green" name="sub-add-op" value="add" id="sub-add">
+                        <input type="submit" class="round-btn little green" name="sub-add-op" value="add" id="sub-add">
                     </td>
 
             </table>

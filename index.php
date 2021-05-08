@@ -18,6 +18,7 @@ try {
 
         elseif($_GET['action'] == 'add-operation') {
             if(!empty($_POST['sub-add-op']) ) {
+                getNotif();
                 addOperation();
             }
             else {

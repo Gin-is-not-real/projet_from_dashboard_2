@@ -6,9 +6,19 @@ html {
     --radius: 10px;
 
     /* INPUTS */
-    --bgbtn-green: rgb(58, 114, 58);
-    --bgbtn-red: rgb(162, 78, 69);
+    --bgbtn-green: rgb(49, 140, 49);
+    --bgbtn-green-hover: rgb(20, 104, 20);
+
+    --bgbtn-red: rgb(158, 60, 49);
+    --bgbtn-red-hover: rgb(141, 38, 26);
+
     --bgbtn-neutral: rgb(102, 96, 93);
+    --bgbtn-neutral-hover: rgb(75, 69, 65);
+    
+    --bgbtn-blue: #333445;
+    --colorbtn-blue: rgba(179, 174, 174, 0.885);
+    --colorbtn-blue-hover: rgb(228, 223, 223);
+
 
     /* POPUS */
     --bg-popup: rgba(124, 39, 36, 0.926);
