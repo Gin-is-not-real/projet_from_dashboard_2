@@ -65,7 +65,3 @@
                         <input type="submit" class="round-btn little red sub-suppr disappear-on-edit" id="sub-suppr-<?= $data['id'] ?>" name="sub-suppr-op" value="X" hidden>
                 </form>
             </td>
-
-<style type="text/css">
-
-</style>

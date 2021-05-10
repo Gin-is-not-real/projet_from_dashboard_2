@@ -28,15 +28,10 @@ $btns = array();
         else {
             if(!isset($_SESSION['pseudo'])) {
                 $_POST['log-notice'] = 'You must log in or register to access the application';
-                // $_POST['log-notice'] = '<p>You must  ' . $btn_connect . '  or  '  . $btn_register . '  to access the application';
-
                 array_push($btns, $btn_connect, $btn_register);
             }
             else {
                 $_POST['notification'] = "you have been successfully logged in as <strong>" . $_SESSION['pseudo'] . "</strong>.";
-
-                // $_POST['log-notice'] = "you have been successfully logged in as <strong>" . $_SESSION['pseudo'] . "</strong>.";
-                // array_push($btns, $btn_deconnect);
             }
         }
 

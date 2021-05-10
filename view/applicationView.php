@@ -5,18 +5,12 @@ require_once('globals.php');
 ?>
 
 <main id="main-application">
-    
-    <!-- <section class="sec-title"> -->
-        <!-- <p>application view</p>  -->
-    <!-- </section>  -->
-
     <?php
         include('parts/form_operations.php');
     ?>
     <?php
         include('parts/table.php');
     ?>
-
 </main>
 
 <?php $content = ob_get_clean(); ?>

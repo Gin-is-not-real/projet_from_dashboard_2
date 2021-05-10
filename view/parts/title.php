@@ -7,7 +7,7 @@
         <section id="title-content">
             <header>
                 <h1>BULBS DASHBOARD</h1>
-                <h2>to have light on all floors !</h2>
+                <h2>To have light on all floors !</h2>
             </header>
 
             <?php include('notice.php'); ?>

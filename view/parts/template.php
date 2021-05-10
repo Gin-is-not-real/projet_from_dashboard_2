@@ -10,6 +10,8 @@
         <link href="style/inputs.css" rel="stylesheet">
         <link href="style/popups.css" rel="stylesheet">
         <link href="style/accounts.css" rel="stylesheet">
+        <link href="style/media_queries.css" rel="stylesheet">
+
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');   
         </style> 
@@ -18,7 +20,6 @@
     <body>
         <?php include('pop_confirm.php'); ?>
         <?php include('pop_notice.php'); ?>
-
         <?php include('title.php'); ?>
 
         <?=$content?>

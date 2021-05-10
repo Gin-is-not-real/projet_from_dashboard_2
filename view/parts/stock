@@ -1,9 +1,0 @@
-        <section id="sec-right">
-            <div id="div-logout">
-                <div id="r-notice">
-                    <?php 
-                        include_once('logout.php');
-                    ?>
-                </div>
-            </div>
-        </section>

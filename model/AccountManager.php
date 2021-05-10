@@ -5,16 +5,12 @@ require_once('./globals.php');
 class AccountManager extends ConnectionManager {
     public $basename;
     public $tablename;
-    // public $connectManager;
     public $dbPDO;
 
     public function __construct() {
-        // $this->connectManager = new ConnectionManager();
         $this->basename = $GLOBALS['basename'];
         $this->tablename = $GLOBALS['log-tablename'];
-        // $this->dbPDO = $this->connectManager->connectBase();
         $this->dbPDO = $this->connectBase();
-
     }
 
     public function init() {
