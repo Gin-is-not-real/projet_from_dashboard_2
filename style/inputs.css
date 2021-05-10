@@ -44,8 +44,13 @@ a {
 .round-btn:hover {
     text-shadow: 1px 0 0 black;
     color: var(--colorbtn-blue-hover);
+}
+.round-btn:active {
+    text-shadow: 1px 0 0 wheat;
+    box-shadow:0 0 1px black ;
     
 }
+
 .super {
     height: 75px;
     width: 75px;

@@ -22,21 +22,32 @@
 .sec-title figure {
     width: max-content;
 }
+#title-content {
+    width: 100%;
+}
 .sec-title > section {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
+.sec-title header {
+    margin-left: 0;
+}
 .sec-title header h1 {
+    align-self: flex-start;
     font-size: 2em;
 }
 .sec-title header h2{
     font-family: 'Caveat', cursive; 
     font-weight: 400;
+    justify-self: flex-start;
 }
-#sec-right {
 
+#sec-right {
+    box-sizing: border-box;
+    max-width: 15%;
 }
 #div-logout {
     width: 100%;

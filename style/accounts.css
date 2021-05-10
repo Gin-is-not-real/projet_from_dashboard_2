@@ -9,6 +9,7 @@
     width: 100%;
     /* border: 1px solid black; */
     background-color: #82839d95;
+
     border-radius: var(--radius);
     max-width: 330px;
     margin: 2% auto;
